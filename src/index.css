@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0F] text-white font-roboto;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#B026FF] to-[#00F0FF];
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg rounded-xl border border-white/10;
+  }
+
+  .neon-button {
+    @apply bg-gradient-to-r from-[#B026FF] to-[#00F0FF] text-white font-semibold px-6 py-3 rounded-lg 
+    transition-all duration-300 hover:shadow-[0_0_20px_rgba(176,38,255,0.5)] hover:scale-[1.02];
+  }
+
+  .service-card {
+    @apply glass-card p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,240,255,0.2)];
+  }
+}
+
+.mesh-gradient {
+  background: radial-gradient(circle at 50% 50%, #B026FF 0%, transparent 50%),
+              radial-gradient(circle at 100% 0%, #00F0FF 0%, transparent 50%);
+  filter: blur(100px);
+  opacity: 0.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
